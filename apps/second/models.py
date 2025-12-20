@@ -14,5 +14,5 @@ class Settings(models.Model):
     locate = models.CharField(max_length=100, verbose_name="Локация")
 
     class Meta:
-        verbose_name = "Данные сайта"
+        verbose_name = "Данный"
         verbose_name_plural = "Данные сайта"
