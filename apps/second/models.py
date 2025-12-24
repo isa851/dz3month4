@@ -1,10 +1,8 @@
-from pyexpat import model
-from tabnanny import verbose
 from django.db import models
 
 # Create your models here.
 
-class Settings(models.Model):
+class Contact(models.Model):
     title = models.CharField(max_length = 30, verbose_name = "Название")
     description = models.TextField(verbose_name = "Описание")
     logo = models.ImageField(verbose_name="Логотип")

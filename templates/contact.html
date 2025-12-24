@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: #ffffff;
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header img {
+            max-width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            color: #222;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .info-item {
+            background: #f1f3f5;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .info-item span {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .icon img {
+            width: 40px;
+            height: 40px;
+        }
+        .a {
+            text-decoration: none;
+            color: #000;
+            margin: auto 150px ; 
+
+        }
+    </style>
+</head>
+<body>
+   <div class="card">
+    <div class="header">
+        <img src="{{ contact.logo.url }}" alt="Logo">
+        <h1>{{ contact.title }}</h1>
+    </div>
+
+    <p class="description">
+        {{ contact.description }}
+    </p>
+
+    <div class="info">
+        <div class="info-item">
+            <span>Email:</span> {{ contact.email }}
+        </div>
+        <div class="info-item">
+            <span>Телефон:</span> {{ contact.phone }}
+        </div>
+        <div class="info-item">
+            <span>Адрес:</span> {{ contact.locate }}
+        </div>
+    </div>
+
+    <div class="icon">
+        <img src="{{ contact.icon.url }}" alt="Icon">
+    </div>
+    <a class="a" href="/">Home</a>
+</div>
+</body>
+</html>
